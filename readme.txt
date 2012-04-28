@@ -1,28 +1,58 @@
 === AddFreeStats Plugin ===
 Contributors: AddFreeStats
 Donate link: http://www.addfreestats.com
-Tags: AddFreeStats,stats, statistics, blog stats, blog statistics
+Tags: AddFreeStats,analytics, addfreestats analytics, stats, statistics, blog stats, blog statistics, statcounter, counter, google, google analytics, stat, statistic, tracking, track, tracker
 Requires at least: 2.0
-Tested up to: 2.6
+Tested up to: 3.3
 Stable tag: 1.3.2
 
-AddFreeStats provides stats in real time. This plugin insert AddFreeStats HTML code into your WordPress blog.
+
+
+AddFreetats Analytics provides free website statistics in real-time. This plugin insert AddFreeStats asynchronous code 
+into your WordPress blog.
 
 == Description ==
 
-Now you can keep track of how many people visit your WordPress blog, when they come, how they found your blog and much, much more... All AddFreeStats blog statistics reports are in real-time!
+AddFreetats Analytic wordpress plugin
 
-AddFreeStats.com allows you to select the button displayed on your blog pages. Invisible or visible: this is your choice! and It's absolutely free! 
+AddFreetats Analytics provides to blog owners free statistics on their visitors. 
+Monitor human activity on your blog in real-time! Now blogger can keep track of how many people 
+visit their website, when they come, how they found their pages and much, much more...
 
-Exit link and Google Adsense tracking clicks 
-AddFreeStats.com tracks where your visitors go after they leave your blog. What's the link they clicked for leaving your blog. 
+Boost the speed of your blog! 
+AddFreeStats Analytics now provides asynchronous tracking code snippet. This technology will 
+dramatically improve your blog pages speed load time and tracking accuracy. 
 
-See your visitors in real-time on Google Map.
+Select tracker design!
+AddFreeStats Analytics allows you to select the tracker design displayed on your website pages. Visible or not!
 
-You can view your blog statistics, at any time, by clicking the AddFreeStats button or by logging on your AddFreeStats account. 
+Free traffic for your blog!
+By including your blog in our free website directory, increase your blog traffic and pagerank.
+
+Why choose AddFreeStats Analytics? 
+
+- Asynchronous tracking technology boosts your website speed load time! 
+- AddFreeStats offers a log-size of the latest 1000 unique visitors. 
+- AddFreeStats analytics is compliant with the privacy laws. 
+- Unlike other AddFreeStats does not use data collected for changing your search engine rankings. 
+- Established in 1999, AddFreeStats Analytics has become a leader on the market. 
+- More than 900000 websites and blogs are tracked by AddFreeStats
+
+Latest Features: 
+
+- Log-size available for the latest 1000 visitors 
+- Display Google search engine rankings for search terms 
+- Entry page now is displayed. 
+- Outbound links and adsense tracking clicks improved 
+- Asynchronous tracking code released 
+- Mobile, Smartphone, Tablet, Game Consoles detection. 
+- Smartphone VS Computer report. 
+- Search engine referrer shows up like: S.E.->Keywords 
+- OS and browser databases updated. 
+- Visitors on Map. 
+- Check your Website statistics on your mobile. 
+
 You can let anyone view your blog stats , or protect your blog statistics by providing a password. 
-
-New! Now at any time, you can check your blog stats on your mobile. 
 
 == Installation ==
 
@@ -54,7 +84,6 @@ and It's absolutely free!
 = Features
 
 Entire profile of the latest 1000 visitors. 
-Where your visitors go after they leave your Blog. 
 Google Adsense tracking exit clicks 
 All pages of your blog are tracked ! 
 History of your Blog statistics and traffic. 

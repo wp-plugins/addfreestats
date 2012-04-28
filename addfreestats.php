@@ -3,19 +3,18 @@
 /*
 Plugin Name: AddFreeStats
 Plugin URI: http://www.addfreestats.com/
-Description: AddfreeStats.com provides to Webmasters, free website statistics on their web site visitors. Insert AddFreeStats HTML code into your blog with this plugin.
-Version: 1.0
+Description: AddfreeStats Analytics provides to Website owner free website statistics on their visitors. Insert AddFreeStats asynchronous tracking code snippet into your blog with this plugin.
+Version: 2.0
 Author: AddFreeStats
 Author URI: http://www.addfreestats.com/
 */
 
   class AddFreeStats_Plugin {
 
-         var $version = "1.1";
+         var $version = "2.0";
 
         function admin_menu() {
-                add_submenu_page('options-general.php', __('AddFreeStats Plugin'), __('AFSWP'), 5, __FILE__, array($this,
-'plugin_menu'));
+                add_submenu_page('options-general.php', __('AddFreeStats Plugin'), __('AFSWP'), 5, __FILE__, array($this,'plugin_menu'));
         }
 
         function wp_footer() {
@@ -24,7 +23,7 @@ Author URI: http://www.addfreestats.com/
 
         function plugin_menu() {
                 $message = null;
-                $message_updated = __("AFS Code inserted.");
+                $message_updated = __("AddFreeStats Code inserted.");
 
                 // update options
 
@@ -51,50 +50,71 @@ Author URI: http://www.addfreestats.com/
                 if ($afs_account>699999) $afs_server='7';
                 if ($afs_account>799999) $afs_server='8';
                 if ($afs_account>899999) $afs_server='9';
+                if ($afs_account>999999) $afs_server='10';
 
-                 $afs_code="<!-- ADDFREESTATS.COM AUTOCODE V4.0 -->\n";
+                $afs_code="<!-- ADDFREESTATS.COM AUTOCODE V5 -->\n";
+                $afs_code .="<!-- Asynchronous tracking code  -->\n";
+                $afs_code .="<!-- Speed Up 10x load time -->\n";
+                $afs_code .="<!-- AUTODETECT PAGE NAME & URL -->\n";
+                
                 if ($afs_x!=0 || $afs_y !=0) //58
                 {
-                $afs_code .="<DIV ID=\"addfreestats\" STYLE=\"position:relative;bottom:";
+                $afs_code .="<DIV ID=\"addfreestats-wordpress\" STYLE=\"position:relative;bottom:";
                 $afs_code .="$afs_y";
-                $afs_code .="px;right:";
-                $afs_code .="$afs_x";
-                $afs_code .="px;\">\n";
+                
+                   if ($afs_x!=0)
+                   {
+                   $afs_code .="px;right:";
+                   $afs_code .="$afs_x";
+                   $afs_code .="px;\">\n";
+                   }
+                   else 
+                   {
+                   $afs_code .="px;\" align=\"center\">\n";   
+                   }
+                             
                 }
-                $afs_code .="<script type=\"text/javascript\">\n";
-                $afs_code .="<!--\n";
-                $afs_code .="var AFS_Account=\"$afs_account\";\n";
-                $afs_code .="var AFS_Tracker=\"auto\";\n";
-                $afs_code .="var AFS_Server=\"www";
-                $afs_code .="$afs_server\";\n"; //68
-                $afs_code .="var AFS_Page=\"DetectName\";\n";
-                $afs_code .="var AFS_Url=\"DetectUrl\";\n";
-                $afs_code .="// -->\n";
-                $afs_code .="</script>\n";
-                $afs_code .="<script type=\"text/javascript\" src=\"http://www";
-                $afs_code .="$afs_server.addfreestats.com/cgi-bin/afstrack.cgi?usr=$afs_account\">\n";
-                $afs_code .="</script>\n";
-                $afs_code .="<noscript>\n";
-                $afs_code .="<a href=\"http://www.addfreestats.com\">\n";
-                $afs_code .="<img src=\"http://www$afs_server.addfreestats.com/cgi-bin/connect.cgi?usr=";
-                $afs_code .="$afs_account";
-                $afs_code .="Pauto\" border=0 alt=\"Free Web Stats\">Web Stats</a>\n";
-                $afs_code .="</noscript>\n";
-                if ($afs_x!=0 || $afs_y !=0) $afs_code .="</div>\n";
-                $afs_code .="<!-- ENDADDFREESTATS.COM AUTOCODE V4.0  -->\n";//82
+                else $afs_code .="<DIV ID=\"addfreestats-wordpress\" align=\"center\" STYLE=\"position:relative;bottom: 2px;\">\n";
+                
+                    
+                
+               $afs_code .="<div id='addfreestats'></div>\n";
+               $afs_code .="<script type=\"text/javascript\"><!--\n";
+               $afs_code .="var AFS_Account=\"$afs_account\";\n";
+               $afs_code .="var AFS_Tracker=\"auto\";\n";
+               $afs_code .="var AFS_Server=\"www";
+               $afs_code .="$afs_server\";\n"; //68
+               $afs_code .="var AFS_Page=\"DetectName\";\n";
+               $afs_code .="var AFS_Url=\"DetectUrl\";\n";
+               $afs_code .="var speed = document.createElement('script');\n";
+               $afs_code .="speed.type = 'text/javascript';\n";
+               $afs_code .="speed.async = true;\n";
+               $afs_code .="speed.src ='http://'+AFS_Server+'.addfreestats.com/cgi-bin/afstracka.cgi?usr='+AFS_Account;\n";
+               $afs_code .="var s = document.getElementsByTagName('script')[0];\n";
+               $afs_code .="s.parentNode.insertBefore(speed, s);\n";
+               $afs_code .="//--></script>\n";
+               $afs_code .="<noscript>\n";
+               $afs_code .="<a href=\"http://www.addfreestats.com\" >\n";
+               $afs_code .="<img src=\"http://www$afs_server.addfreestats.com/cgi-bin/connect.cgi?usr=";
+               $afs_code .="$afs_account";
+               $afs_code .="Pauto\" border=0 alt=\"AddFreeStats\">Website Statistics</a>\n";
+               $afs_code .="</noscript>\n";
+               $afs_code .="</div>\n";
+               $afs_code .="<!-- ENDADDFREESTATS.COM AUTOCODE V5.0  -->\n";//82
                 $message = $message_updated;
                 update_option('afs_code', $afs_code);
                 wp_cache_flush();
                 }
 
 ?>
+
 <?php if ($message) : ?>
 <div id="message" class="updated fade"><p><?php echo $message; ?></p></div>
 <?php endif; ?>
 <div id="dropmessage" class="updated" style="display:none;"></div>
 <div class="wrap">
 <h2><?php _e('AddFreeStats Options'); ?></h2>
-<p><?php _e('<a title="AddFreeStats WordPress" href="http://www.addfreestats.com/">AddFreeStats WordPress
+<p><?php _e('<a title="AddFreeStats WordPress" href="http://www.addfreestats.com/wordpress.html">AddFreeStats WordPress
 Help</a>') ?></p>
 <p><?php _e('Code appear in your footer') ?></p>
 
@@ -113,10 +133,8 @@ Help</a>') ?></p>
 
 <th scope="row" style="text-align:right; vertical-align:top;"><?php _e('Bottom Position:')?></td>
 <td><input type="text" size="20" name="afs_y"  value="<?php echo stripcslashes(get_option('afs_y')); ?>"</td></tr>
-<tr>
-<th scope="row" style="text-align:right; vertical-align:top;"><?php _e('Code:')?></td>
-<td>
-<textarea cols="60" rows="10" name="afs_code"><?php echo stripcslashes(get_option('afs_code')); ?></textarea></td></tr>
+
+
 </table>
 <p class="submit">
 <input type="hidden" name="action" value="update" />
