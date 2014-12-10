@@ -11,7 +11,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 
 
-[AddFreeStats](http://www.addfreestats.com/) Analytics offers one of the best real-time website analytics tool using the latest technologies.And it's free! 
+AddFreeStats Analytics offers one of the best real-time website analytics tool using the latest technologies. 
 
 
 == Description ==
