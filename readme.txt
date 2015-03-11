@@ -1,9 +1,9 @@
 === AddFreeStats Plugin ===
 Contributors: AddFreeStats
 Donate link: http://www.addfreestats.com
-Tags: AddFreeStats, wordpress, wordpress stats, analytics, stats, statistics, free statistics, website stats, website statistics, blog statistics, statcounter, counter, google, google analytics, stat, statistic, tracking, track, tracker
+Tags: AddFreeStats, stats, analytics, dashboard, visitors, trafic, statistics, free statistics, website stats, website statistics, blog statistics, statcounter, counter, google, google analytics, stat, statistic, tracking, track, tracker
 Requires at least: 2.0
-Tested up to: 4.0.1
+Tested up to: 4.1.1
 Stable tag: 3.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -11,14 +11,14 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 
 
-[AddFreeStats](http://www.addfreestats.com/) Analytics offers one of the best real-time website analytics tool using the latest technologies.And it's free! 
+AddFreeStats Analytics offers one of the best real-time website analytics tool using the latest technologies. Free! 
 
 
 == Description ==
 
 Easy to install and use! Get amazing information about your website traffic! Analyze your visitor behavior and understand how to improve your website content. 
 
-[AddFreeStats Analytics](http://www.addfreestats.com/) offers you two real-time reports continuously updated. The dashboard displays your website metrics into a single page. The “Right now” report allows you to monitor the current activity on your website.
+[AddFreeStats Analytics](http://www.addfreestats.com/) offers you two real-time reports continuously updated. The real-time dashboard displays your website metrics into a single page. The “Right now” report allows you to monitor the current activity on your website.
 
 **Real-Time Analytics Reporting:**
 With LiveDisplay technology, AddFreeStats provides real-time reporting. Your website data are tracked immediately and the reports continuously updated. 
@@ -71,7 +71,7 @@ If you need additional help? Contact us on facebook: https://www.facebook.com/Ad
 = Where I can see a sample statistics report?
 
 [Live Demo] (http://www.addfreestats.com/dashboard.php?demo=1)
-
+[Facebook support]  (https://www.facebook.com/AddFreeStats)
 
 = Is it possible to get an invisible tracker?
 
@@ -98,6 +98,9 @@ immediatly, statistics reports are in real-time.
 5  Plugin
 
 == Changelog ==
+
+= 3.1 =
+Minor changes
 
 = 3.0 =
 New UI

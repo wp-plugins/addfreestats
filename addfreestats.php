@@ -4,14 +4,14 @@
 Plugin Name: AddFreeStats
 Plugin URI: http://www.addfreestats.com/
 Description: AddFreeStats offers one of the best real-time website analytics tool using the latest technologies. Easy to use! Easy to install
-Version: 3.0
+Version: 3.1
 Author: AddFreeStats
 Author URI: http://www.addfreestats.com/
 */
 
   class AddFreeStats_Plugin {
 
-         var $version = "3.0";
+         var $version = "3.1";
 
         function admin_menu() {
                 add_submenu_page('options-general.php', __('AddFreeStats Plugin'), __('AFSWP'), 'manage_options', __FILE__, array($this,'plugin_menu'));
@@ -53,7 +53,7 @@ Author URI: http://www.addfreestats.com/
                 if ($afs_account>899999) $afs_server='9';
                 if ($afs_account>999999) $afs_server='10';
 
-                $afs_code="<!-- ADDFREESTATS.COM AUTOCODE V5 -->\n";
+                $afs_code="<!-- ADDFREESTATS Wordpress analytics 5.01 -->\n";
                 $afs_code .="<!-- Asynchronous tracking code  -->\n";
                 $afs_code .="<!-- Speed Up 10x load time -->\n";
                 $afs_code .="<!-- AUTODETECT PAGE NAME & URL -->\n";
@@ -156,7 +156,8 @@ print "<img src='$plugdir/addfreestats/logo.png'></a>\n";
                 1 - New Website? -> <a href="javascript:register()">Click here</a> to get a Website ID.<br>
                 2 - Type your Website ID into the Website ID field.<br>
                 3 - Click on 'Update Options' button.<br>
-                4 - AddFreeStats code will be inserted into the footer. 
+                4 - AddFreeStats code will be inserted into the footer. <br>
+                5 - Join us at <a href="https://www.facebook.com/addfreestats">Facebook</a>. 
                 <br><br>
                 If you want to display it in other place, just paste the line: <I>
                 &ltdiv id="addfreestats"&gt&lt/div&gt </I> 
