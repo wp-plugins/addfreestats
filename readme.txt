@@ -16,7 +16,7 @@ AddFreeStats Analytics offers one of the best real-time website analytics tool u
 
 == Description ==
 
-Easy to install and use! Get amazing information about your website traffic! Analyze your visitor behavior and understand how to improve your website content. 
+Easy to install and use! Get priceless information about your website traffic! Analyze your visitor behavior and understand how to improve your website content. 
 
 [AddFreeStats Analytics](http://www.addfreestats.com/) offers you two real-time reports continuously updated. The real-time dashboard displays your website metrics into a single page. The “Right now” report allows you to monitor the current activity on your website.
 
